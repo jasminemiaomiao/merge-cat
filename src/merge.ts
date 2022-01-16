@@ -91,6 +91,9 @@ const merge = () => {
                     })
                   })
 
+                  if (!fs.existsSync(join(__dirname, '/../output'))){
+                    fs.mkdirSync(join(__dirname, '/../output'));
+                  }
                   //print to file
                   const csv = new ObjectsToCsv(merged)
 
